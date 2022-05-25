@@ -1,0 +1,337 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-text-color: black;
+    --main-bg-color: white;
+    --full-width: 100%;
+    --headerH: 85px;
+}
+
+html {
+    scroll-padding-top: var(--headerH);
+}
+
+
+/* MAIN STYLES */
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--main-text-color);
+    background-color: var(--main-bg-color);
+    width: 100%;
+    text-align: center;
+    opacity: 0.9;
+    margin: 0;
+    font-size: 22px;
+}
+
+.opacity {
+    opacity: 0.5;
+}
+
+h2,
+h3,
+h4,
+h5,
+p {
+    padding: 0.7rem 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+/* NAVIGATION */
+
+.header {
+    border-bottom: 2px solid seashell;
+    position: fixed;
+    z-index: 1;
+    background-color: var(--main-bg-color);
+    width: var(--full-width);
+}
+
+.nav-header {
+    height: var(--headerH);
+    width: var(--full-width);
+}
+
+.logo {
+    max-height: 10vh;
+    padding-left: 1rem;
+}
+
+.nav-toggle {
+    margin-right: 1rem;
+}
+
+.nav-links {
+    width: var(--full-width);
+    padding: 0;
+    margin: 0;
+    height: 0;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+}
+
+.link {
+    display: block;
+    padding: 1rem;
+    font-size: 1.5em;
+}
+
+.link a {
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+
+.show-links {
+    height: 240px;
+}
+
+
+/* MAIN SECTION */
+
+.main {
+    padding-top: var(--headerH);
+}
+
+
+/* MISSION SECTION */
+
+#mission {
+    min-height: 70vh;
+    background-image: url("./images/img-mission-background.jpg");
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+}
+
+.mission-content {
+    width: 80vw;
+    justify-content: center;
+    background-color: var(--main-bg-color);
+    padding: 2rem 1.2rem;
+    outline: 2px solid seashell;
+    outline-offset: -15px;
+    font-size: 0.8em;
+}
+
+
+/* Restaurant OF THE MONTH */
+
+#Restaurant-of-the-month {
+    flex-direction: column;
+    margin: auto;
+}
+
+.items {
+    flex-direction: column;
+}
+
+.item img {
+    max-height: 50vh;
+    max-width: 70vw;
+}
+
+
+/* LOCATIONS SECTION */
+
+#locations {
+    margin-top: 1rem;
+    background-image: url("./images/img-locations-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-flow: column;
+}
+
+#locations h2 {
+    color: #000000;
+    padding-top: 2rem;
+}
+
+.location {
+    text-align: center;
+    padding-bottom: 1rem;
+    height: auto;
+}
+
+.address {
+    flex-flow: column;
+    max-width: 80%;
+    background: #e1d9c4;
+    margin: 1em auto;
+    padding: 1em 0;
+}
+
+
+/* BOTTOM SECTION */
+
+
+/* FOOTER */
+
+footer p {
+    font-size: 0.8em;
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+    body {
+        font-size: 18px;
+    }
+    .logo {
+        max-height: 8vmax;
+    }
+    .mission-content {
+        height: 30vmax;
+        width: 50vmax;
+        padding: 1em;
+        font-size: 1em;
+    }
+    .items {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .item {
+        margin: 0.5em 0.5em;
+    }
+    .item img {
+        max-height: 40vh;
+        max-width: 50vw;
+    }
+    .address {
+        font-size: 0.8em;
+        max-width: 40%;
+        display: inline-flex;
+        width: 30vmax;
+        height: auto;
+        margin: 0.2em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .logo {
+        max-height: 8vh;
+    }
+    /* MISSION SECTION */
+    body {
+        font-size: 22px;
+    }
+    #mission {
+        height: 80vh;
+    }
+    .mission-content {
+        width: var(--full-width);
+        padding: 0.3em 0.5em;
+        outline: none;
+        outline-offset: 0;
+        font-size: 1.1em;
+        height: auto;
+    }
+    /* Restaurant OF THE MONTH */
+    .items {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .item {
+        margin: 0.5em 1.2em;
+        transition: 200ms ease-out;
+    }
+    .item:hover {
+        transform: scale(1.2);
+        transition: 200ms ease-out;
+    }
+    .item img {
+        height: 40vh;
+        width: 28vw;
+    }
+    /* LOCATIONS */
+    .address {
+        max-width: 40%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        font-size: 22px;
+    }
+    .opacity {
+        opacity: 1;
+    }
+    .main {
+        width: 90%;
+        margin: 0 auto;
+    }
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+        padding: .5em 0;
+    }
+    /* NAV and HEADER */
+    .nav-header {
+        width: auto;
+    }
+    .logo {
+        max-height: 10vh;
+    }
+    .nav-toggle {
+        display: none;
+    }
+    .nav-links {
+        width: auto;
+        height: auto;
+        transition: none;
+    }
+    .link {
+        display: inline-block;
+        font-size: 1.1em;
+        padding: 0.5em;
+        transition: 0.2s ease-out;
+    }
+    .link:hover {
+        transform: scale(1.2);
+        transition: 0.2s ease-in;
+    }
+    /* MISSION SECTION */
+    #mission {
+        height: 90vh;
+    }
+    .mission-content {
+        font-size: 0.8em;
+        display: block;
+        height: auto;
+    }
+    /* Restaurant OF THE MONTH */
+    .item {
+        margin: 0.5em 0.5em;
+    }
+    .item img {
+        max-height: 40vh;
+        max-width: 40vw;
+    }
+    /* LOCATIONS */
+    #locations {
+        height: vmax;
+    }
+    #locations h2 {
+        color: var(--main-text-color);
+    }
+    .address {
+        display: inline-flex;
+        width: 26vmax;
+        height: 18vmax;
+        margin: 1em 1em;
+        font-size: 1.1em;
+        padding: 0.4em;
+    }
+}
