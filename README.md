@@ -5,4 +5,4 @@ I decided to make web page responsive with dinamically populated content by Java
 Technology used: HTML, CSS, JavaScript.
 
 
-file:///Users/annaolme/Desktop/Screenshot%202022-06-15%20at%2012.03.52.png
+file:///Users/annaolme/Desktop/Screenshot%202022-06-15%20at%2012.03.52.png 
